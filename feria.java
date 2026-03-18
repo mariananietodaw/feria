@@ -7,7 +7,6 @@ public class feria {
     //metodos
     public void añadirCaseta(caseta caseta){
         caseArrayList.add(caseta);
-  
     }
     public void mostrarCasetas(){
         for (caseta c: caseArrayList) {

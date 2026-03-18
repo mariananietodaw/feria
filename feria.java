@@ -1,11 +1,43 @@
 import java.util.ArrayList;
+package gestiondeferiadessevilla;
 
 public class feria {
+    private String nombre;
+    private ArrayList<caseta> caseArrayList= new ArrayList<>();
 
-    ArrayList<caseta> caseArrayList= new ArrayList<>();
-
+    public feria(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
     //metodos
     public void añadirCaseta(caseta caseta){
+        int numeroCaseta;
+        String calleCaseta;
+        String nombreCaseta;
+        int tamanoCaseta;
+        String categoriaCaseta;
+
+        SYSTEM.out.println("Introduce el número de la caseta:");
+        numeroCaseta = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+        SYSTEM.out.println("Introduce la calle de la caseta:");
+        calleCaseta = scanner.nextLine();
+        SYSTEM.out.println("Introduce el nombre de la caseta:");
+        nombreCaseta = scanner.nextLine();
+        SYSTEM.out.println("Introduce el tamaño de la caseta:");
+        tamanoCaseta = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+        SYSTEM.out.println("Introduce la categoría de la caseta (pública o privada):");
+        categoriaCaseta = scanner.nextLine();
+        caseta caseta = new caseta(numeroCaseta, calleCaseta, nombreCaseta, tamanoCaseta, categoriaCaseta);
+        
+        
         caseArrayList.add(caseta);
     }
     public void mostrarCasetas(){
